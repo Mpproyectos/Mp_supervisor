@@ -50,15 +50,37 @@ public class AdapterMisNodos extends RecyclerView.Adapter<AdapterMisNodos.MisNod
     @Override
     public void onBindViewHolder(final MisNodosViewHolder holder, final int position) {
 
-
-
         internet = new detectorInternet(context);
-
         final ModeloNodo nodo = nodoList.get(position);
 
+        holder.nombrenodo.setText(nodo.getNombreNodo());
+        holder.tv_fecha.setText(nodo.getFechaNodo());
 
+        holder.btn_detalle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
+        if(nodo.getEstado().equals("finalizado")){
+            holder.img_finalizado.setVisibility(View.VISIBLE);
+            holder.btn_finalizado.setVisibility(View.VISIBLE);
+
+            holder.img_enproceso.setVisibility(View.GONE);
+            holder.btn_enproceso.setVisibility(View.GONE);
+        }else{
+            holder.img_enproceso.setVisibility(View.VISIBLE);
+            holder.btn_enproceso.setVisibility(View.VISIBLE);
+
+            holder.img_finalizado.setVisibility(View.GONE);
+            holder.btn_finalizado.setVisibility(View.GONE);
+        }
 
     }
+
+
 
 
     @Override
@@ -68,20 +90,24 @@ public class AdapterMisNodos extends RecyclerView.Adapter<AdapterMisNodos.MisNod
 
     public class MisNodosViewHolder extends RecyclerView.ViewHolder{
 
-        TextView tv_valnodo,tv_nombre;
-        Button btn_confirmar,btn_autorizar;
+        TextView tv_fecha,nombrenodo;
+        Button btn_finalizado,btn_enproceso,btn_detalle;
         CardView cardView;
         ImageView img_categorias;
         ProgressBar progressBar;
-        ImageView img_new,img_finalizado,img_visto;
+        ImageView img_finalizado,img_enproceso;
 
 
         public MisNodosViewHolder(View itemView) {
             super(itemView);
             cardView = itemView.findViewById(R.id.card_view);
-
-
-
+            btn_finalizado = itemView.findViewById(R.id.btn_finalizado);
+            img_finalizado = itemView.findViewById(R.id.img_finalizado);
+            btn_enproceso = itemView.findViewById(R.id.btn_enproceso);
+            img_enproceso = itemView.findViewById(R.id.img_enproceso);
+            nombrenodo = itemView.findViewById(R.id.nombrenodo);
+            tv_fecha = itemView.findViewById(R.id.tv_fecha);
+            btn_detalle = itemView.findViewById(R.id.btn_detalle);
         }
 
     }

@@ -23,6 +23,9 @@
         android:windowSoftInputMode="stateVisible|adjustResize"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".MisnodosActivity"
+            android:exported="false" />
+        <activity
             android:name=".clientes.VerPruebasActivity"
             android:exported="false" />
         <activity

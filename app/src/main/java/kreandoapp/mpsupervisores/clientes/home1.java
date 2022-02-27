@@ -78,6 +78,7 @@ import io.github.inflationx.calligraphy3.CalligraphyInterceptor;
 import io.github.inflationx.viewpump.ViewPump;
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import kreandoapp.mpsupervisores.ContactosRVActivity;
+import kreandoapp.mpsupervisores.MisnodosActivity;
 import kreandoapp.mpsupervisores.Notifications.Token;
 import kreandoapp.mpsupervisores.R;
 import kreandoapp.mpsupervisores.adapter.AdapterCategoria;
@@ -641,7 +642,7 @@ public class home1 extends AppCompatActivity
             handler.postDelayed(new Runnable() {
                 public void run() {
                     finish();
-                    Intent i = new Intent(home1.this, misdatos.class);
+                    Intent i = new Intent(home1.this, MisnodosActivity.class);
                     startActivity(i);
                 }
             }, 200);

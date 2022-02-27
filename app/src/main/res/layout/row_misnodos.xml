@@ -84,21 +84,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-
+                android:visibility="gone"
                 android:id="@+id/img_finalizado"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/icons8_ok_48"
                 android:layout_width="30dp"
                 android:layout_height="30dp" />
-
             <ImageView
                 android:visibility="gone"
-                android:id="@+id/img_visto"
-                android:layout_gravity="center"
-                android:src="@drawable/visto_azul"
+                android:id="@+id/img_enproceso"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_system_update_alt_24"
                 android:layout_width="30dp"
                 android:layout_height="30dp" />
+
+
 
             <ImageView
                 android:layout_weight="1"
@@ -111,12 +113,24 @@
 
 
             <Button
+                android:visibility="gone"
                 android:layout_weight="1"
-                android:id="@+id/btn_confirmar"
+                android:id="@+id/btn_finalizado"
 
                 android:textColor="@color/white"
                 android:background="@color/colorPrimaryDark"
                 android:text="Completado"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+
+            </Button>
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_enproceso"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimaryDark"
+                android:text="en proceso"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp">
 
