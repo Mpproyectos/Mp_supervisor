@@ -623,12 +623,7 @@ public class home1 extends AppCompatActivity
             gologing();
             return true;
         }
-        if(id == R.id.politicas){
-            Uri uri = Uri.parse("http://rodadosnorte.com/deliveryapp/privacy_policy.html"); // missing 'http://' will cause crashed
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -651,7 +646,7 @@ public class home1 extends AppCompatActivity
                 }
             }, 200);
 
-        } else if (id == R.id.cart) {
+        } /*else if (id == R.id.cart) {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
@@ -705,7 +700,7 @@ public class home1 extends AppCompatActivity
 
 
     }
-
+*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
