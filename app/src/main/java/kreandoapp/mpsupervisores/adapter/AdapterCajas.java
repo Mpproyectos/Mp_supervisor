@@ -73,6 +73,15 @@ public class AdapterCajas extends RecyclerView.Adapter<AdapterCajas.CajasviewHol
             holder.img_nuevo.setVisibility(View.VISIBLE);
         }
 
+        if(!caj.getFase1_urlfoto().equals("")){
+            holder.btn_ver.setVisibility(View.VISIBLE);
+        }else {
+            holder.btn_ver.setVisibility(View.GONE);
+        }
+        if(!caj.getFase2_urlfoto().equals("")){
+            holder.btn_ver.setVisibility(View.VISIBLE);
+        }
+
         holder.btn_ver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

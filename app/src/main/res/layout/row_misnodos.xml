@@ -137,11 +137,11 @@
             </Button>
 
             <ImageButton
-
+                android:visibility="gone"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="20dp"
                 android:background="@drawable/boton_redondo"
-                android:id="@+id/btn_detalle"
+                android:id="@+id/btn_detalle_misnodos"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"

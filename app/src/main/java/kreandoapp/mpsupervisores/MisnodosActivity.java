@@ -47,6 +47,15 @@ public class MisnodosActivity extends AppCompatActivity {
     private LinearLayoutManager mLayoutManager;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, home1.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_misnodos);
@@ -98,7 +107,6 @@ public class MisnodosActivity extends AppCompatActivity {
                         ModeloNodo req = snapshot.getValue(ModeloNodo.class);
 
                         NodosArrayList.add(req);
-
 
                     }
 

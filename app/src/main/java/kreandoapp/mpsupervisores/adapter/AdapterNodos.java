@@ -131,10 +131,13 @@ public class AdapterNodos extends RecyclerView.Adapter<AdapterNodos.NodosViewHol
                     SharedPreferences sharedPreferences = v.getContext().getSharedPreferences("MySharedPref",MODE_PRIVATE);
                     SharedPreferences.Editor myEdit = sharedPreferences.edit();
                     myEdit.putString("id_nodo", nodo.getIdnodo());
+                    myEdit.putString("destino","confirmar");
+
                     myEdit.putString("nombre_nodo", nodo.getNombreNodo());
                     myEdit.commit();
 
                     i.putExtra("nombre_nodo",nodo.getNombreNodo());
+
                     i.putExtra("id_usuario",nodo.getId_usuario());
                     i.putExtra("nombre",part1);
                     i.putExtra("id_nodo",nodo.getIdnodo());
@@ -159,6 +162,7 @@ public class AdapterNodos extends RecyclerView.Adapter<AdapterNodos.NodosViewHol
                     i.putExtra("nombre_nodo",nodo.getNombreNodo());
                     i.putExtra("id_usuario",nodo.getId_usuario());
                     i.putExtra("nombre",part1);
+
                     i.putExtra("id_nodo",nodo.getIdnodo());
                     v.getContext().startActivity(i);
                 }

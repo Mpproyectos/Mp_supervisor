@@ -118,7 +118,7 @@
         <Button
             android:layout_weight="1"
             android:id="@+id/btn_ver"
-
+            android:visibility="gone"
             android:textColor="@color/white"
             android:background="@color/colorPrimaryDark"
             android:text="Ver Fotos pruebas"
