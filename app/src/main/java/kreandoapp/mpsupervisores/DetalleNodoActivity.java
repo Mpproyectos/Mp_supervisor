@@ -35,6 +35,7 @@ public class DetalleNodoActivity extends AppCompatActivity {
     ArrayList<ModeloCaja> cajasArrayList;
     AdapterCajas adapter;
     RecyclerView rv_cajas;
+    TextView tv_nombre_tecnico;
 
     private LinearLayoutManager mLayoutManager;
 
@@ -45,9 +46,13 @@ public class DetalleNodoActivity extends AppCompatActivity {
 
         final String nombre_nodo = getIntent().getExtras().getString("nombre_nodo");
         final String id_nodo = getIntent().getExtras().getString("id_nodo");
+        final String nombre_user = getIntent().getExtras().getString("nombre");
 
         tv_titulo_toolbar = findViewById(R.id.tv_titulo_toolbar);
         tv_titulo_toolbar.setText("Detalle nodo: "+nombre_nodo);
+
+        tv_nombre_tecnico = findViewById(R.id.tv_nombre_tecnico);
+        tv_nombre_tecnico.setText(nombre_user);
 
         botonvolver = findViewById(R.id.btn_volverAtras);
         botonvolver.setOnClickListener(new View.OnClickListener() {
